@@ -3,7 +3,7 @@ package sistemaventas;
 import java.util.Scanner;
 
 public class Producto {
-
+    
     public static void Ventas() {
         Scanner teclado = new Scanner(System.in);
 
@@ -100,11 +100,11 @@ public class Producto {
                     IVA = montoConDescuento * 0.12;
                     total = montoConDescuento + IVA;
 
-                    System.out.println("Subtotal: Q" + subtotal);
+                    System.out.printf("Subtotal: Q%.2f%n", + subtotal);
                     System.out.println("Descuento: Q" + descuento);
                     System.out.println("Monto con descuento: Q" + montoConDescuento);
-                    System.out.println("IVA: Q" + IVA);
-                    System.out.println("Total: Q" + total);
+                    System.out.printf("IVA: Q%.2f%n", + IVA);
+                    System.out.printf("Total: Q%.2f%n", total);
 
                     System.out.println("\nForma de pago:");
                     System.out.println("1. Efectivo");
@@ -144,14 +144,14 @@ public class Producto {
                     }
                     System.out.println("\n==== RESUMEN DE LA VENTA ====");
                     System.out.println("Cantidad de productos: " + cantidadVenta);
-                    System.out.println("Subtotal: Q" + subtotal);
+                    System.out.printf("Subtotal: Q%.2f%n", + subtotal);
                     System.out.println("Descuento: Q" + descuento);
-                    System.out.println("IVA: Q" + IVA);
+                    System.out.printf("IVA: Q%.2f%n", + IVA);
                     System.out.printf("Total: Q%.2f%n", total); // es para que solo hayan dos decimales
                     System.out.println("Forma de pago: " + formaPago);
                     if (metodo == 1) {
                         System.out.println("Efectivo recibido: Q" + recibido);
-                        System.out.println("Cambio: Q" + cambio);
+                        System.out.printf("Cambio: Q%.2f%n", + cambio);
                     }
                     ventasRealizadas = ventasRealizadas + 1;
                     productosVendidos = productosVendidos + cantidadVenta;
@@ -176,7 +176,7 @@ public class Producto {
                     System.out.println("\n====== CAJA ======");
                     System.out.println("Ventas realizadas: " + ventasRealizadas);
                     System.out.println("Productos vendidos: " + productosVendidos);
-                    System.out.println("Total vendido Q: " + totalVendido);
+                    System.out.printf("Total vendido Q%.2f%n: ", + totalVendido);
                     System.out.println("Ventas por efectivo: " + ventasEfectivo);
                     System.out.println("Ventas por tarjeta: " + ventasTarjeta);
                     System.out.println("Ventas por transferencia: " + ventasTransferencia);
@@ -191,13 +191,13 @@ public class Producto {
                         System.out.println("\n====== ESTADISTICAS ======");
                         System.out.println("Total de ventas: " + ventasRealizadas);
                         System.out.println("Productos vendidos: " + productosVendidos);
-                        System.out.println("Total vendido: Q" + totalVendido);
-                        System.out.println("Promedio por venta: Q" + (totalVendido / ventasRealizadas));
+                        System.out.printf("Total vendido: Q%.2f%n", + totalVendido);
+                        System.out.printf("Promedio por venta: Q%.2f%n", + (totalVendido / ventasRealizadas));
                         System.out.println("Ventas en efectivo: " + ventasEfectivo);
                         System.out.println("Ventas con tarjeta: " + ventasTarjeta);
                         System.out.println("Ventas por transferencia: " + ventasTransferencia);
-                        System.out.println("Venta mayor: Q" + ventaMayor);
-                        System.out.println("Venta menor: Q" + ventaMenor);
+                        System.out.printf("Venta mayor: Q%.2f%n", + ventaMayor);
+                        System.out.printf("Venta menor: Q%.2f%n", + ventaMenor);
                         System.out.println("  ==========================");
                     }
                     break;
